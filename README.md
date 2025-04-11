@@ -1,7 +1,7 @@
 
 A responsive portfolio website built with Next.js 15, React 19, and modern web technologies. This portfolio showcases an interactive user interface with smooth animations.
 
-## 🚀 Features
+##  Features
 
 - **Modern Tech Stack**: Built with Next.js 15 and React 19
 - **Beautiful UI**: Styled with Tailwind CSS and Radix UI components
@@ -13,7 +13,7 @@ A responsive portfolio website built with Next.js 15, React 19, and modern web t
 - **Particle Effects**: Using TSParticles for engaging backgrounds
 - **Type Safety**: Written in TypeScript for better development experience
 
-## 🛠️ Technologies
+##  Technologies
 
 - [Next.js 15](https://nextjs.org/)
 - [React 19](https://react.dev/)
@@ -25,7 +25,7 @@ A responsive portfolio website built with Next.js 15, React 19, and modern web t
 - [EmailJS](https://www.emailjs.com/)
 - [TSParticles](https://particles.js.org/)
 
-## 📦 Installation
+##  Installation
 
 1. Clone the repository:
 ```bash
@@ -53,7 +53,7 @@ pnpm dev
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🏗️ Building for Production
+##  Building for Production
 
 ```bash
 npm run build
@@ -63,7 +63,7 @@ yarn build
 pnpm build
 ```
 
-## 📝 Environment Variables
+##  Environment Variables
 
 Create a `.env.local` file in the root directory and add the following variables:
 
@@ -73,18 +73,18 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_emailjs_service_id
 ```
 
-## 🎨 Customization
+##  Customization
 
 - Modify the content in `app/page.tsx` to update your portfolio information
 - Customize the theme in `tailwind.config.js`
 - Update the 3D models and animations in the components directory
 - Modify the particle effects in the relevant components
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+##  Author
 
 **Your Name**
 - GitHub: [@Gyokuken](https://github.com/Gyokuken)
