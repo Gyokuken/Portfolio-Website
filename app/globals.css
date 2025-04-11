@@ -1,0 +1,409 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0b0e;
+  --foreground: #e0e0e0;
+  --primary: #00ff95;
+  --primary-dark: #00cc78;
+  --secondary: #0f1419;
+  --accent: #00ff95;
+  --text-primary: #ffffff;
+  --text-secondary: #8892b0;
+  --neon-glow: 0 0 10px rgba(0, 255, 149, 0.3);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Add consistent dark overlay background */
+.dark-overlay {
+  background: linear-gradient(to bottom, rgba(10, 11, 14, 0.95), rgba(10, 11, 14, 0.98));
+  backdrop-filter: blur(10px);
+}
+
+.cyber-border {
+  border: 1px solid var(--primary);
+  box-shadow: var(--neon-glow);
+}
+
+.cyber-text {
+  color: var(--primary);
+  text-shadow: var(--neon-glow);
+}
+
+.cyber-gradient {
+  background: linear-gradient(90deg, var(--secondary), var(--background));
+}
+
+/* Compact section spacing */
+section {
+  @apply py-6;
+  background: var(--background);
+}
+
+.section-inner {
+  @apply py-4;
+}
+
+.container {
+  @apply px-4 max-w-6xl mx-auto;
+}
+
+/* Project cards */
+.project-card,
+.project-card:hover,
+.project-card .content,
+.project-card h3,
+.project-card p,
+.project-card .tags,
+.project-card .tag,
+.project-card .links,
+.project-card .link {
+  /* Remove these styles as they're not being used */
+}
+
+/* Buttons */
+.filter-btn {
+  @apply px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-300;
+  @apply text-[#8892b0] hover:text-[#00ff95] border border-gray-800;
+  background: rgba(15, 20, 25, 0.7);
+}
+
+.filter-btn.active {
+  @apply text-[#00ff95] border-[#00ff95];
+  background: rgba(0, 255, 149, 0.05);
+  box-shadow: var(--neon-glow);
+}
+
+.primary-button {
+  @apply px-4 py-2 rounded-md text-[#00ff95] border border-[#00ff95] hover:bg-[#00ff95] hover:text-[#0a0b0e] transition-all duration-300 text-sm;
+  background: rgba(0, 255, 149, 0.05);
+}
+
+.primary-button:hover {
+  box-shadow: var(--neon-glow);
+}
+
+/* Section titles */
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-8 text-center;
+  color: rgb(139, 167, 255);
+  text-shadow: 0 0 10px rgba(139, 167, 255, 0.5);
+}
+
+.project-title {
+  @apply text-2xl md:text-3xl font-bold;
+  color: var(--primary);
+  text-shadow: var(--neon-glow);
+}
+
+/* Add styles for all headings */
+h1, h2, h3.main-heading {
+  color: rgb(139, 167, 255);
+  text-shadow: 0 0 10px rgba(139, 167, 255, 0.5);
+}
+
+/* Form elements */
+.form-input {
+  @apply w-full px-3 py-2 rounded-md text-white bg-transparent border border-gray-800 focus:border-[#00ff95] focus:outline-none transition-all duration-300 text-sm;
+  background: rgba(15, 20, 25, 0.7);
+}
+
+.form-input:focus {
+  box-shadow: var(--neon-glow);
+}
+
+/* Navigation */
+.nav-link {
+  @apply text-[#8892b0] hover:text-[#00ff95] transition-colors duration-300;
+}
+
+.nav-link.active {
+  color: var(--primary);
+  text-shadow: var(--neon-glow);
+}
+
+/* Social icons */
+.social-icon {
+  @apply text-[#00ff95] hover:text-white transition-colors duration-300;
+}
+
+.social-icon:hover {
+  text-shadow: var(--neon-glow);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Cyber card enhanced for project cards */
+.cyber-card {
+  @apply relative overflow-hidden rounded-lg border border-gray-800;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+  @apply border-[#00ff95];
+  box-shadow: 0 0 20px rgba(0, 255, 149, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Project card image hover effect */
+.img-wrapper {
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover .img-wrapper {
+  transform: scale(1.02);
+}
+
+/* Project card tag hover effects */
+.cyber-card span {
+  transition: all 0.2s ease;
+}
+
+.cyber-card span:hover {
+  background: rgba(0, 255, 149, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Project card link hover effects */
+.cyber-card a {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.cyber-card a:hover {
+  transform: translateY(-2px);
+}
+
+.cyber-card a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #00ff95;
+  transition: width 0.3s ease;
+}
+
+.cyber-card a:hover:after {
+  width: 100%;
+}
+
+.projects-wrapper {
+  @apply relative;
+}
+
+.projects-container {
+  @apply relative w-full overflow-x-auto pb-4;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.projects-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+  background: var(--secondary);
+  border-radius: 3px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+.projects-row {
+  @apply flex gap-6 px-4;
+  width: max-content;
+}
+
+.project-card {
+  @apply relative w-[350px] flex-none rounded-lg border border-gray-800 overflow-hidden p-6;
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+  @apply border-[#00ff95];
+  box-shadow: 0 0 20px rgba(0, 255, 149, 0.1);
+}
+
+.project-scroll {
+  display: inline-flex;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.project-card-scroll {
+  @apply relative rounded-lg border border-gray-800;
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  width: min(400px, calc(100vw - 4rem));
+  flex-shrink: 0;
+  white-space: normal;
+}
+
+.project-card-scroll:hover {
+  @apply border-[#00ff95];
+  box-shadow: 0 0 20px rgba(0, 255, 149, 0.1);
+}
+
+.scroll-button {
+  @apply absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full;
+  @apply text-[rgb(139,167,255)] bg-[rgba(15,23,42,0.9)] border border-[rgb(139,167,255)];
+  @apply hover:text-[#00ff95] hover:border-[#00ff95] transition-all duration-300;
+  backdrop-filter: blur(4px);
+}
+
+.scroll-button:disabled {
+  @apply opacity-0 cursor-not-allowed;
+}
+
+.scroll-button.left {
+  @apply left-2;
+}
+
+.scroll-button.right {
+  @apply right-2;
+}
+
+/* Terminal styles */
+.terminal-window {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'JetBrains Mono', monospace;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 0 20px rgba(0, 255, 149, 0.15);
+}
+
+.terminal-header {
+  background-color: transparent;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.terminal-button-red {
+  background-color: #ff5f56;
+}
+
+.terminal-button-yellow {
+  background-color: #ffbd2e;
+}
+
+.terminal-button-green {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  color: #666;
+  font-size: 14px;
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.terminal-content {
+  padding: 16px;
+  line-height: 1.6;
+  text-align: left;
+  position: relative;
+  color: #fff;
+}
+
+.terminal-content .text-primary {
+  color: #00ff95;
+  margin-right: 8px;
+  text-shadow: 0 0 10px rgba(0, 255, 149, 0.3);
+}
+
+.terminal-content.main-heading {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #fff;
+}
+
+.terminal-content.sub-heading {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.terminal-content.description {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #fff;
+  max-width: 42rem;
+  margin: 1rem auto 0;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.2em;
+  background-color: #fff;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal-content {
+    font-size: 1rem;
+  }
+}
