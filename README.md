@@ -86,7 +86,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ##  Author
 
-**Your Name**
+**Amyzz**
 - GitHub: [@Gyokuken](https://github.com/Gyokuken)
 - LinkedIn: [Amitanshu](https://linkedin.com/in/amitanshu-lal-611248244)
 - Portfolio: [Amy's Portfolio](https://portfolio-website-lime-two-16.vercel.app)
