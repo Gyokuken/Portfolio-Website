@@ -63,7 +63,7 @@ export default function Home() {
     }, 2000)
 
     // Initialize EmailJS
-    emailjs.init("-sll3K81l6AmxAsOA");
+    emailjs.init("YOUR_EMAILJS_PUBLIC_KEY_HERE");
 
     return () => clearTimeout(timer)
   }, [])
@@ -87,10 +87,10 @@ export default function Home() {
     try {
       // Send email using EmailJS
       const result = await emailjs.sendForm(
-        'service_t6p95cc',
-        'template_uv5cqbg',
+        'YOUR_EMAILJS_SERVICE_ID_HERE',
+        'YOUR_EMAILJS_TEMPLATE_ID_HERE',
         e.currentTarget,
-        '-sll3K81l6AmxAsOA'
+        'YOUR_EMAILJS_PUBLIC_KEY_HERE'
       );
 
       if (result.text === 'OK') {
